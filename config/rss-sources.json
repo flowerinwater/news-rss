@@ -16,7 +16,7 @@
   },
   {
     "name": "虎嗅网",
-    "url": "https://www.huxiu.com/rss/0.xml",
+    "url": "https://rss.huxiu.com/",
     "category": "business"
   },
   {
@@ -41,7 +41,7 @@
   },
   {
     "name": "Annual Review of Food Science and Technology",
-    "url": "http://www.annualreviews.org/action/showFeed?ui=45mu4&mi=3fndc3&ai=68da&jc=food&type=etoc&feed=rss",
+    "url": "https://www.annualreviews.org/rss/content/journals/food/latestarticles?fmt=rss",
     "category": "food-science"
   },
   {
@@ -145,7 +145,7 @@
     "category": "food-science"
   },
   {
-    "name": "營養共筆",
+    "name": "营营养共笔",
     "url": "http://www.nutrinote.co/?feed=rss2",
     "category": "knowledge"
   },
@@ -357,7 +357,7 @@
   {
     "name": "格隆汇快讯",
     "url": "https://rsshub.app/gelonghui/live",
-    "category": "china-news"
+    "category": "business"
   },
   {
     "name": "凤凰财经股市要闻",

@@ -13,6 +13,20 @@ from datetime import datetime, timedelta, timezone
 from diskcache import Cache
 from utils import load_config, save_json_data, format_datetime
 
+# 设置日志配置
+def setup_logging():
+    logging.basicConfig(
+        level=logging.INFO,
+        format='%(asctime)s - %(levelname)s - %(message)s',
+        handlers=[
+            logging.FileHandler('collect_rss.log'),
+            logging.StreamHandler()
+        ]
+    )
+
+setup_logging()
+logger = logging.getLogger(__name__)
+
 async def fetch_rss_feed(session, url, timeout=10):
     """
     异步获取RSS源内容
@@ -297,3 +311,22 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+try:
+    import feedparser
+    logger.info('feedparser模块导入成功')
+except ImportError as e:
+    logger.error('无法导入feedparser模块: %s', str(e))
+    raise
+
+async def fetch_rss_feed(session, url):
+    try:
+        async with session.get(url, timeout=10) as response:
+            if response.status != 200:
+                logger.error('RSS请求失败: %s, 状态码: %d', url, response.status)
+                return None
+            content = await response.text()
+            return content
+    except Exception as e:
+        logger.error('获取RSS内容失败: %s, 错误: %s', url, str(e))
+        return None
