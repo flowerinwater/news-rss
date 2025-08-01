@@ -1,11 +1,10 @@
 {
-  "total_news": 43,
+  "total_news": 32,
   "sources": [
-    "食品资讯",
-    "开源中国",
-    "虎嗅网",
     "艾瑞资讯",
-    "Wiley: Food Science & Nutrition"
+    "食品资讯",
+    "Wiley: Food Science & Nutrition",
+    "虎嗅网"
   ],
-  "generated_at": "2025-08-01 10:24:47"
+  "generated_at": "2025-08-01 12:46:36"
 }
